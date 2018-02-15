@@ -3,6 +3,8 @@ package com.wipro.chc.Assignment2;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -11,9 +13,13 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.remote.CommandExecutor;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -37,6 +43,7 @@ public class Library
 	//private static final int TIME_UNIT = 30;
 	static ExtentReports extent;
 	static ExtentTest logger;
+	public static String Node = "http://10.255.54.24:4444/wd/hub";
 	
 	/**
 	 * This Method is to load the ObjectRepo properties file into class
@@ -54,9 +61,16 @@ public class Library
 	 * This Method will launch the Opencart Application
 	 * @param driver
 	 * @return 
+	 * @throws MalformedURLException 
 	 */
-	public static WebDriver launchOpencart(WebDriver driver)
+	public static WebDriver launchOpencart(WebDriver driver) throws MalformedURLException
 	{
+		
+		/*DesiredCapabilities capability = DesiredCapabilities.chrome();
+        capability.setBrowserName("chrome");
+        capability.setPlatform(Platform.WIN10);
+        driver = new RemoteWebDriver(new URL(Node), capability);*/
+ 		
 		driver.get(pro.getProperty("OpenCart.URL"));
 		System.out.println("Step01: Opencart Application Launched Successfully");
 		logger.log(LogStatus.PASS, "Step 1 : Opencart Application Launched..");

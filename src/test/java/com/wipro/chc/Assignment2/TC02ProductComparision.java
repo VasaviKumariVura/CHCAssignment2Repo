@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import jxl.Cell;
@@ -17,9 +18,12 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -54,8 +58,14 @@ public class TC02ProductComparision extends Library
 	@BeforeClass
 	public void launchBrowser() throws InterruptedException, IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		DesiredCapabilities capability = new DesiredCapabilities();
+	    capability.setBrowserName("chrome");
+	    capability.setPlatform(Platform.WINDOWS);
+	    driver = new RemoteWebDriver(new URL(Node), capability);
+	        
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
 		logger = extent.startTest("Product Comparision");
@@ -140,8 +150,9 @@ public class TC02ProductComparision extends Library
 		{
 			Thread.sleep(2000);
 			//driver.findElement(By.xpath(pro.getProperty("OpenCart.PhonesAndPDAs.AddToCompare.Xpath"))).click();
-			driver.findElement(By.xpath("//div[@id='content']/div[4]/div["+i+"]/div[1]/div[3]/a")).click();
-			//wait = new WebDriverWait(driver, 10);
+			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='content']/div[4]/div["+i+"]/div[1]/div[3]/a")));
+			element.click();
+			//driver.findElement(By.xpath("//div[@id='content']/div[4]/div["+i+"]/div[1]/div[3]/a")).click();
 			WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pro.getProperty("OpenCart.PhonesAndPDAs.AddToCompare.SuccessMessage.Xpath"))));
 			String SuccessMessage= element1.getText();
 			Thread.sleep(3000);

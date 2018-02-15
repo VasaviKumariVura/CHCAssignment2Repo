@@ -3,6 +3,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -11,10 +12,13 @@ import jxl.Sheet;
 import jxl.Workbook;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.ITestResult;
@@ -43,12 +47,12 @@ public class TC01RegistrationAndOpenToCart extends Library
 	public static String getFax;
 	public static String uniqueEmail;
 	public static String getPassword;
+	//public static String Node = "http://10.255.54.24:4444/wd/hub";
 	
 	private static final int TIME_UNIT = 30;
 	Scanner scan = new Scanner(System.in);
 	FileWriter fw;
 	BufferedWriter bw;
-	//ExtentTest logger;
 	
 	/**
 	 * 
@@ -58,8 +62,14 @@ public class TC01RegistrationAndOpenToCart extends Library
 	@BeforeClass
 	public void launchBrowser() throws InterruptedException, IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		DesiredCapabilities capability = new DesiredCapabilities();
+		capability.setBrowserName("chrome");
+        capability.setPlatform(Platform.WINDOWS);
+        driver = new RemoteWebDriver(new URL(Node), capability);
+        
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
 		logger = extent.startTest("Registration to Opencart");

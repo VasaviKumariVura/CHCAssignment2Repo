@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
     <classes>
+      <class name="com.wipro.chc.Assignment2.TC02ProductComparision">
+        <methods>
+          <include name="testcase02" invocation-numbers="0"/>
+          <include name="getResult"/>
+          <include name="startReport"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.wipro.chc.Assignment2.TC02ProductComparision -->
       <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
         <methods>
-          <include name="testcase04"/>
-          <include name="startReport"/>
+          <include name="launchBrowser"/>
         </methods>
       </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
       <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
         <methods>
           <include name="launchBrowser"/>
-          <include name="testcase03"/>
+          <include name="testcase03" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
+      <class name="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart">
+        <methods>
+          <include name="testcase01_part02"/>
+          <include name="launchBrowser"/>
+          <include name="getResult"/>
+          <include name="testcase01_part03"/>
+        </methods>
+      </class> <!-- com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

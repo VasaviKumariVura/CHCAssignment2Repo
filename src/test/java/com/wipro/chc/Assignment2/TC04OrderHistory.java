@@ -3,6 +3,7 @@ package com.wipro.chc.Assignment2;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -10,9 +11,12 @@ import java.util.concurrent.TimeUnit;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -34,8 +38,14 @@ public class TC04OrderHistory extends Library
 	@BeforeClass
 	public void launchBrowser() throws IOException
 	{
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		DesiredCapabilities capability = new DesiredCapabilities();
+	    capability.setBrowserName("chrome");
+	    capability.setPlatform(Platform.WINDOWS);
+	    driver = new RemoteWebDriver(new URL(Node), capability);
+		
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
 		logger = extent.startTest("OrderHistory");

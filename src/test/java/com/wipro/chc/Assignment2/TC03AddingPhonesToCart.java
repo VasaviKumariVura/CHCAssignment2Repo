@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -16,9 +17,12 @@ import jxl.read.biff.BiffException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -47,8 +51,13 @@ public class TC03AddingPhonesToCart extends Library
 	public void launchBrowser() throws InterruptedException, IOException
 	{
 		logger = extent.startTest("Adding Phones to Cart");
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
+	    capability.setPlatform(Platform.WINDOWS);
+	    driver = new RemoteWebDriver(new URL(Node), capability);
+	    
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		loadProperties();
