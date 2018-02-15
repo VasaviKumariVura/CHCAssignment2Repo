@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="340278" started-at="2018-02-15T05:41:18Z" finished-at="2018-02-15T05:46:58Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="340278" started-at="2018-02-15T05:41:18Z" finished-at="2018-02-15T05:46:58Z">
+      <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="startReport" is-config="true" duration-ms="590" started-at="2018-02-15T11:11:17Z" finished-at="2018-02-15T11:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="launchBrowser" is-config="true" duration-ms="1756" started-at="2018-02-15T11:15:42Z" finished-at="2018-02-15T11:15:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testcase04()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="testcase04" duration-ms="73786" started-at="2018-02-15T11:15:44Z" description="Order History" finished-at="2018-02-15T11:16:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase04 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:16:58Z" finished-at="2018-02-15T11:16:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase04 status=SUCCESS method=TC04OrderHistory.testcase04()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="closeBrowser" is-config="true" duration-ms="259" started-at="2018-02-15T11:16:58Z" finished-at="2018-02-15T11:16:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@5d624da6]" name="endReport" is-config="true" duration-ms="731" started-at="2018-02-15T11:16:58Z" finished-at="2018-02-15T11:16:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
+      <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@47f6473]" name="launchBrowser" is-config="true" duration-ms="2077" started-at="2018-02-15T11:14:32Z" finished-at="2018-02-15T11:14:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@47f6473]" name="testcase03" duration-ms="67203" started-at="2018-02-15T11:14:35Z" description="Adding Phones To Cart" data-provider="BillingAddressDetails" finished-at="2018-02-15T11:15:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[vasavi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[vura]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Wipro]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Khazaguda]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Manikonda]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Hyderabad]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[500090]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase03 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@47f6473]" name="closeBrowser" is-config="true" duration-ms="365" started-at="2018-02-15T11:15:42Z" finished-at="2018-02-15T11:15:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@47f6473]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:15:42Z" finished-at="2018-02-15T11:15:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase03 status=SUCCESS method=TC03AddingPhonesToCart.testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@47f6473] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
+      <class name="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="launchBrowser" is-config="true" duration-ms="6945" started-at="2018-02-15T11:11:18Z" finished-at="2018-02-15T11:11:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testcase01_part01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="testcase01_part01" duration-ms="36215" started-at="2018-02-15T11:11:25Z" description="Registration to Opencart" data-provider="RegistrationDetails" finished-at="2018-02-15T11:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[demo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[opencart]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[opencartdemo]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Wipro]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[255331]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Pragathi Nagar]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Nizampet]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[Hyderabad]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[500090]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[demo@123]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[demo@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase01_part01 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="getResult" is-config="true" duration-ms="1" started-at="2018-02-15T11:12:01Z" finished-at="2018-02-15T11:12:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase01_part01 status=SUCCESS method=TC01RegistrationAndOpenToCart.testcase01_part01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="testcase01_part02" duration-ms="11174" started-at="2018-02-15T11:12:01Z" description="Adding Review to the Product" data-provider="ReviewProductDetails" finished-at="2018-02-15T11:12:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[The Product is Good]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase01_part02 -->
+        <test-method status="PASS" signature="testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="testcase01_part02" duration-ms="11344" started-at="2018-02-15T11:12:12Z" description="Adding Review to the Product" data-provider="ReviewProductDetails" finished-at="2018-02-15T11:12:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[The Product is worthless. May be received duplicate product.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase01_part02 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:12:12Z" finished-at="2018-02-15T11:12:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase01_part02 status=SUCCESS method=TC01RegistrationAndOpenToCart.testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="testcase01_part03()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="testcase01_part03" duration-ms="20095" started-at="2018-02-15T11:12:24Z" finished-at="2018-02-15T11:12:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase01_part03 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:12:24Z" finished-at="2018-02-15T11:12:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase01_part02 status=SUCCESS method=TC01RegistrationAndOpenToCart.testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="closeBrowser" is-config="true" duration-ms="316" started-at="2018-02-15T11:12:44Z" finished-at="2018-02-15T11:12:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:12:44Z" finished-at="2018-02-15T11:12:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase01_part03 status=SUCCESS method=TC01RegistrationAndOpenToCart.testcase01_part03()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@15975490] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart -->
+      <class name="com.wipro.chc.Assignment2.TC02ProductComparision">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@6b143ee9]" name="launchBrowser" is-config="true" duration-ms="3516" started-at="2018-02-15T11:12:44Z" finished-at="2018-02-15T11:12:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testcase02(java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@6b143ee9]" name="testcase02" duration-ms="104144" started-at="2018-02-15T11:12:48Z" description="Product Comparision" data-provider="SearchProduct" finished-at="2018-02-15T11:14:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[apple]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase02 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@6b143ee9]" name="closeBrowser" is-config="true" duration-ms="326" started-at="2018-02-15T11:14:32Z" finished-at="2018-02-15T11:14:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@6b143ee9]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T11:14:32Z" finished-at="2018-02-15T11:14:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase02 status=SUCCESS method=TC02ProductComparision.testcase02(java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@6b143ee9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.wipro.chc.Assignment2.TC02ProductComparision -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

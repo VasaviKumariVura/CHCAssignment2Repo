@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
+        <methods>
+          <include name="testcase04"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
+      <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="testcase03"/>
+        </methods>
+      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
