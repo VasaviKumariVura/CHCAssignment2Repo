@@ -61,8 +61,7 @@ public class TC02ProductComparision extends Library
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
-		DesiredCapabilities capability = new DesiredCapabilities();
-	    capability.setBrowserName("chrome");
+		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
 	    capability.setPlatform(Platform.WINDOWS);
 	    driver = new RemoteWebDriver(new URL(Node), capability);
 	        
@@ -82,8 +81,10 @@ public class TC02ProductComparision extends Library
 		 * TC04: Enter the key word in search text box on top right of the page.  
 		 * Hit Enter button only and no icon click.
 		 */
+		Thread.sleep(2000);
 		driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).clear();
 		driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).sendKeys(ProductName);
+		Thread.sleep(1000);
 		//driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).sendKeys(Keys.ENTER);
 		Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);

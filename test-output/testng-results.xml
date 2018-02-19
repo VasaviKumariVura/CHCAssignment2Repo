@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="2" failed="2" total="7" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="125290" started-at="2018-02-15T12:05:38Z" finished-at="2018-02-15T12:07:44Z">
+  <suite name="Default suite" duration-ms="77782" started-at="2018-02-19T05:49:42Z" finished-at="2018-02-19T05:51:00Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="125290" started-at="2018-02-15T12:05:38Z" finished-at="2018-02-15T12:07:44Z">
-      <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@13805618]" name="launchBrowser" is-config="true" duration-ms="8162" started-at="2018-02-15T17:35:38Z" finished-at="2018-02-15T17:35:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="testcase04()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@13805618]" name="testcase04" duration-ms="117084" started-at="2018-02-15T17:35:47Z" description="Order History" finished-at="2018-02-15T17:37:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase04 -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@13805618]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:37:44Z" finished-at="2018-02-15T17:37:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC04OrderHistory@13805618]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-02-15T17:37:44Z" finished-at="2018-02-15T17:37:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
+    <test name="Default test" duration-ms="77782" started-at="2018-02-19T05:49:42Z" finished-at="2018-02-19T05:51:00Z">
       <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@56ef9176]" name="launchBrowser" is-config="true" duration-ms="9504" started-at="2018-02-15T17:35:38Z" finished-at="2018-02-15T17:35:48Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="startReport" is-config="true" duration-ms="319" started-at="2018-02-19T11:19:42Z" finished-at="2018-02-19T11:19:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="launchBrowser" is-config="true" duration-ms="4181" started-at="2018-02-19T11:19:42Z" finished-at="2018-02-19T11:19:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@56ef9176]" name="testcase03" duration-ms="75122" started-at="2018-02-15T17:35:48Z" description="Adding Phones To Cart" data-provider="BillingAddressDetails" finished-at="2018-02-15T17:37:03Z">
+        <test-method status="PASS" signature="testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="testcase03" duration-ms="71224" started-at="2018-02-19T11:19:47Z" description="Adding Phones To Cart" data-provider="BillingAddressDetails" finished-at="2018-02-19T11:20:58Z">
           <params>
             <param index="0">
               <value>
@@ -72,332 +58,29 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[Element is not displayed
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'D-113096609', ip: '10.255.54.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:38485/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: 0776774d-9d69-4104-a6b4-b93...}
-Session ID: 0776774d-9d69-4104-a6b4-b93b7e72a4f4]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element is not displayed
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'D-113096609', ip: '10.255.54.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:38485/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, webdriver.remote.sessionid: 0776774d-9d69-4104-a6b4-b93...}
-Session ID: 0776774d-9d69-4104-a6b4-b93b7e72a4f4
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-	at com.wipro.chc.Assignment2.TC03AddingPhonesToCart.addingPhonesToCart(TC03AddingPhonesToCart.java:233)
-	at com.wipro.chc.Assignment2.TC03AddingPhonesToCart.testcase03(TC03AddingPhonesToCart.java:401)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase03 -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@56ef9176]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:37:03Z" finished-at="2018-02-15T17:37:03Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-19T11:20:58Z" finished-at="2018-02-19T11:20:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase03 status=SUCCESS method=TC03AddingPhonesToCart.testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@56ef9176]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-02-15T17:37:03Z" finished-at="2018-02-15T17:37:03Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="closeBrowser" is-config="true" duration-ms="2198" started-at="2018-02-19T11:20:58Z" finished-at="2018-02-19T11:21:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
-      <class name="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="launchBrowser" is-config="true" duration-ms="8173" started-at="2018-02-15T17:35:38Z" finished-at="2018-02-15T17:35:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="testcase01_part01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="testcase01_part01" duration-ms="44666" started-at="2018-02-15T17:35:47Z" description="Registration to Opencart" data-provider="RegistrationDetails" finished-at="2018-02-15T17:36:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[demo]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[opencart]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[opencartdemo]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9876543210]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[12345]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Wipro]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[255331]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Pragathi Nagar]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[Nizampet]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Hyderabad]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[500090]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[demo@123]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[demo@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase01_part01 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="getResult" is-config="true" duration-ms="2" started-at="2018-02-15T17:36:32Z" finished-at="2018-02-15T17:36:32Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testcase01_part01 status=SUCCESS method=TC01RegistrationAndOpenToCart.testcase01_part01(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="testcase01_part02" duration-ms="11884" started-at="2018-02-15T17:36:32Z" description="Adding Review to the Product" data-provider="ReviewProductDetails" finished-at="2018-02-15T17:36:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[User1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[The Product is Good]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase01_part02 -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:44Z" finished-at="2018-02-15T17:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="testcase01_part02(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="testcase01_part02" duration-ms="1" started-at="2018-02-15T17:36:44Z" description="Adding Review to the Product" data-provider="ReviewProductDetails" finished-at="2018-02-15T17:36:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[User1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[The Product is worthless. May be received duplicate product.]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase01_part02 -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:44Z" finished-at="2018-02-15T17:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="testcase01_part03()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="testcase01_part03" duration-ms="1" started-at="2018-02-15T17:36:44Z" finished-at="2018-02-15T17:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase01_part03 -->
-        <test-method status="SKIP" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:44Z" finished-at="2018-02-15T17:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart@4566e5bd]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:44Z" finished-at="2018-02-15T17:36:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart -->
-      <class name="com.wipro.chc.Assignment2.TC02ProductComparision">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="startReport" is-config="true" duration-ms="374" started-at="2018-02-15T17:35:38Z" finished-at="2018-02-15T17:35:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="launchBrowser" is-config="true" duration-ms="8170" started-at="2018-02-15T17:35:38Z" finished-at="2018-02-15T17:35:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="testcase02(java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="testcase02" duration-ms="53911" started-at="2018-02-15T17:35:47Z" description="Product Comparision" data-provider="SearchProduct" finished-at="2018-02-15T17:36:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[apple]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"class name","selector":"results"}
-  (Session info: chrome=64.0.3282.140)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'D-113096609', ip: '10.255.54.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\va255332\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.140, webStorageEnabled: true, webdriver.remote.sessionid: 6087347c8d8cae2b472b581e0c7...}
-Session ID: 6087347c8d8cae2b472b581e0c749d7d
-*** Element info: {Using=class name, value=results}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"class name","selector":"results"}
-  (Session info: chrome=64.0.3282.140)
-  (Driver info: chromedriver=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'D-113096609', ip: '10.255.54.24', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptSslCerts: true, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.33.506120 (e3e53437346286..., userDataDir: C:\Users\va255332\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.140, webStorageEnabled: true, webdriver.remote.sessionid: 6087347c8d8cae2b472b581e0c7...}
-Session ID: 6087347c8d8cae2b472b581e0c749d7d
-*** Element info: {Using=class name, value=results}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:370)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:456)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:391)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at com.wipro.chc.Assignment2.TC02ProductComparision.productComparision(TC02ProductComparision.java:93)
-	at com.wipro.chc.Assignment2.TC02ProductComparision.testcase02(TC02ProductComparision.java:415)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase02 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:41Z" finished-at="2018-02-15T17:36:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testcase02 status=FAILURE method=TC02ProductComparision.testcase02(java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="FAIL" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2018-02-15T17:36:41Z" finished-at="2018-02-15T17:36:41Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.wipro.chc.Assignment2.TC02ProductComparision.closeBrowser(TC02ProductComparision.java:424)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.wipro.chc.Assignment2.TC02ProductComparision@5bcab519]" name="endReport" is-config="true" duration-ms="0" started-at="2018-02-15T17:37:44Z" finished-at="2018-02-15T17:37:44Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="endReport" is-config="true" duration-ms="694" started-at="2018-02-19T11:21:00Z" finished-at="2018-02-19T11:21:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- com.wipro.chc.Assignment2.TC02ProductComparision -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

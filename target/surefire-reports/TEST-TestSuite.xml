@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="323.961" tests="7" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="364.401" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -63,11 +63,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testcase01_part01" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="36.216"/>
-  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.173"/>
-  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.344"/>
-  <testcase name="testcase01_part03" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="20.095"/>
-  <testcase name="testcase02" classname="com.wipro.chc.Assignment2.TC02ProductComparision" time="104.144"/>
-  <testcase name="testcase03" classname="com.wipro.chc.Assignment2.TC03AddingPhonesToCart" time="67.204"/>
-  <testcase name="testcase04" classname="com.wipro.chc.Assignment2.TC04OrderHistory" time="73.785"/>
+  <testcase name="testcase01_part01" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="24.896"/>
+  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.19"/>
+  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.235"/>
+  <testcase name="testcase01_part03" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="20.558"/>
+  <testcase name="testcase02" classname="com.wipro.chc.Assignment2.TC02ProductComparision" time="150.841"/>
+  <testcase name="testcase03" classname="com.wipro.chc.Assignment2.TC03AddingPhonesToCart" time="70.172"/>
+  <testcase name="testcase04" classname="com.wipro.chc.Assignment2.TC04OrderHistory" time="75.509"/>
 </testsuite>

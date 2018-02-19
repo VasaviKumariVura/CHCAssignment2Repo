@@ -54,15 +54,14 @@ public class TC03AddingPhonesToCart extends Library
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
-		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
+		DesiredCapabilities capability = new DesiredCapabilities();
+	    capability.setBrowserName("chrome");
 	    capability.setPlatform(Platform.WINDOWS);
 	    driver = new RemoteWebDriver(new URL(Node), capability);
 	    
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		loadProperties();
-		System.out.println("after load");
-		System.out.println("after load");
 	}
 	
 	
@@ -428,11 +427,12 @@ public class TC03AddingPhonesToCart extends Library
 	
 	
 	@AfterClass
-	public void closeBrowser() throws IOException
+	public void closeBrowser() throws IOException, InterruptedException
 	{
 		bw1.close();
 		fw1.close();
 		extent.endTest(logger);
+		Thread.sleep(2000);
 		driver.close();
 		System.out.println("END OF TESTCASE 03");
 	}
