@@ -95,7 +95,7 @@ public class TC03AddingPhonesToCart extends Library
 		Thread.sleep(3000);
 		imageCount = driver.findElement(By.xpath(pro.getProperty("Opencart.MainImage.ImageCount.Xpath"))).getText().substring(11);
 		System.out.println("imageCount:" +imageCount);
-		fw1 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc03_output.txt");
+		fw1 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc03_output.txt");
 		bw1 = new BufferedWriter(fw1);
 		bw1.append("Number of Images: "+imageCount);
 		System.out.println("TC03-Step06: Count of Images written to File successfully");
@@ -305,7 +305,7 @@ public class TC03AddingPhonesToCart extends Library
 		al.add(price2);
 		al.add(price3);
 		
-		File excel = new File("D://TopGear//OpenCart_L2_Vasavi//output_files//PriceDetails.xlsx");
+		File excel = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//PriceDetails.xlsx");
 		FileOutputStream fos = new FileOutputStream(excel);
 		XSSFWorkbook wb = new XSSFWorkbook();
 		XSSFSheet s1 = wb.createSheet("Price Details");
@@ -407,7 +407,7 @@ public class TC03AddingPhonesToCart extends Library
 	@DataProvider (name="BillingAddressDetails")
 	public Object[][] readRegistrationDetails() throws BiffException, IOException
 	{
-		File reg = new File("D://TopGear//OpenCart_L2_Vasavi//input_files//TestData.xls");
+		File reg = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//TestData.xls");
 		Workbook wb = Workbook.getWorkbook(reg);
 		Sheet s1 = wb.getSheet("BillingDetails");
 		int rows = s1.getRows();
@@ -431,7 +431,8 @@ public class TC03AddingPhonesToCart extends Library
 	{
 		bw1.close();
 		fw1.close();
-		extent.endTest(logger);
+		//extent.endTest(logger);
+		extent.flush();
 		Thread.sleep(2000);
 		driver.close();
 		System.out.println("END OF TESTCASE 03");

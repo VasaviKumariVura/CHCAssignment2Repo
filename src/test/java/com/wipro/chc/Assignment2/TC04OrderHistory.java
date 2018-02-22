@@ -204,7 +204,7 @@ public class TC04OrderHistory extends Library
 		al2.add(productUnitPrice2);
 		al2.add(productTotal2);
 		
-		File compareExcel = new File("D://TopGear//OpenCart_L2_Vasavi//output_files//ProdCompare.xlsx");
+		File compareExcel = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//ProdCompare.xlsx");
 		FileOutputStream fos = new FileOutputStream(compareExcel);
 		XSSFWorkbook wb = new XSSFWorkbook();
 		XSSFSheet sh = wb.createSheet("Product Compare");
@@ -318,7 +318,8 @@ public class TC04OrderHistory extends Library
 	@AfterClass
 	public void closeBrowser() throws IOException
 	{
-		extent.endTest(logger);
+		//extent.endTest(logger);
+		extent.flush();
 		driver.close();
 		System.out.println("END OF TESTCASE 04");
 	}

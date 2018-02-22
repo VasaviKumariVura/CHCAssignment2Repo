@@ -123,7 +123,7 @@ public class Library
 	public void DeleteFiles() throws IOException 
 	 {
 	    System.out.println("Called deleteFiles");
-	    File file = new File("D://TopGear//OpenCart_L2_Vasavi//output_files//Screenshots");
+	    File file = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//Screenshots");
 	    String[] myFiles;
 	    if (file.isDirectory()) 
 		{
@@ -197,8 +197,8 @@ public class Library
 	@AfterSuite
 	public void endReport()
 	{
-		//extent.endTest(logger);
-		extent.flush();
+		extent.endTest(logger);
+		//extent.flush();
 		extent.close();
 	}
 }

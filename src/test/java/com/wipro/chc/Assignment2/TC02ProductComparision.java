@@ -18,6 +18,7 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,7 +62,12 @@ public class TC02ProductComparision extends Library
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
-		DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
+		/*DesiredCapabilities capability = DesiredCapabilities.internetExplorer();
+	    capability.setPlatform(Platform.WINDOWS);
+	    driver = new RemoteWebDriver(new URL(Node), capability);*/
+		
+		DesiredCapabilities capability = new DesiredCapabilities();
+	    capability.setBrowserName("chrome");
 	    capability.setPlatform(Platform.WINDOWS);
 	    driver = new RemoteWebDriver(new URL(Node), capability);
 	        
@@ -85,15 +91,15 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).clear();
 		driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).sendKeys(ProductName);
 		Thread.sleep(1000);
-		//driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).sendKeys(Keys.ENTER);
-		Robot robot = new Robot();
+		driver.findElement(By.name(pro.getProperty("OpenCart.Search.Name"))).sendKeys(Keys.ENTER);
+		/*Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);*/
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
 		//Count Number of Items
 		String count = driver.findElement(By.className(pro.getProperty("OpenCart.Search.Results.ClassName"))).getText().substring(13,14);
 		//System.out.println(count);
-		fw1 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output.txt");
+		fw1 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output.txt");
 		bw1 = new BufferedWriter(fw1);
 		bw1.newLine();
 		bw1.append("Number of Search Items with phrase 'apple': "+count);
@@ -145,7 +151,7 @@ public class TC02ProductComparision extends Library
 		/*
 		 * TC08: Click on "Add to Compare " for the first three phones" and click on Close button
 		 */
-		fw2 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output_productnames.txt");
+		fw2 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output_productnames.txt");
 		bw2 = new BufferedWriter(fw2);
 		for(int i=1; i<4; i++)
 		{
@@ -153,9 +159,11 @@ public class TC02ProductComparision extends Library
 			//driver.findElement(By.xpath(pro.getProperty("OpenCart.PhonesAndPDAs.AddToCompare.Xpath"))).click();
 			WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='content']/div[4]/div["+i+"]/div[1]/div[3]/a")));
 			element.click();
+			Thread.sleep(3000);
 			//driver.findElement(By.xpath("//div[@id='content']/div[4]/div["+i+"]/div[1]/div[3]/a")).click();
 			WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(pro.getProperty("OpenCart.PhonesAndPDAs.AddToCompare.SuccessMessage.Xpath"))));
-			String SuccessMessage= element1.getText();
+			String SuccessMessage = null;
+			SuccessMessage= element1.getText();
 			Thread.sleep(3000);
 			//Validate Success Message
 			Assert.assertTrue(SuccessMessage.contains("Success"), "Not Able to Add product for Compare");
@@ -181,7 +189,7 @@ public class TC02ProductComparision extends Library
 		 */
 		Thread.sleep(2000);
 		driver.findElement(By.id(pro.getProperty("OpenCart.ProductCompare.id"))).click();
-		fr = new FileReader("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output_productnames.txt");
+		fr = new FileReader("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output_productnames.txt");
 		br = new BufferedReader(fr);
 		String content = "";
 		int i=2;
@@ -205,7 +213,8 @@ public class TC02ProductComparision extends Library
 		/*
 		 * TC10: Click on the first phone link on the page.
 		 */
-		driver.findElement(By.xpath(pro.getProperty("OpenCart.ProductCompare.FirstPhoneLink.Xpath"))).click();
+		//driver.findElement(By.xpath(pro.getProperty("OpenCart.ProductCompare.FirstPhoneLink.Xpath"))).click();
+		driver.findElement(By.linkText("iPhone")).click();
 		System.out.println("TC02-Step10: Product Details displaying Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
 		logger.log(LogStatus.PASS, "TC02 Step 10 Passed");
@@ -213,7 +222,7 @@ public class TC02ProductComparision extends Library
 		/*
 		 * TC11: Check the fifth feature in the description section of the phone and write into flat file.
 		 */
-		fw3 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output_prod_desc.txt");
+		fw3 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output_prod_desc.txt");
 		bw3 = new BufferedWriter(fw3);
 		try{
 			String fifthLine = driver.findElement(By.xpath(pro.getProperty("OpenCart.ProductCompare.FirstPhoneLink.DescriptionFifthLine.Xpath"))).getText();
@@ -315,7 +324,7 @@ public class TC02ProductComparision extends Library
 		//checkpoint
 		String[] orderNum = driver.findElement(By.xpath(pro.getProperty("Opencart.OrderHistory.OrderNumber.Xpath"))).getText().split(":");
 		String[] cost = driver.findElement(By.xpath(pro.getProperty("Opencart.OrderHistory.OrderCost.Xpath"))).getText().split("Total:");
-		fw4 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output_orderDetails.txt");
+		fw4 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output_orderDetails.txt");
 		bw4 = new BufferedWriter(fw4);
 		bw4.append("Order Number is: "+orderNum[1]);
 		bw4.newLine();
@@ -377,7 +386,7 @@ public class TC02ProductComparision extends Library
 		//Count Number of Items
 		String count = driver.findElement(By.className(pro.getProperty("OpenCart.Search.Results.ClassName"))).getText().substring(13,14);
 		//System.out.println(count);
-		fw1 = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc02_output.txt");
+		fw1 = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc02_output.txt");
 		bw1 = new BufferedWriter(fw1);
 		bw1.newLine();
 		bw1.append("Number of Search Items with phrase 'apple': "+count);
@@ -388,7 +397,7 @@ public class TC02ProductComparision extends Library
 	@DataProvider (name="SearchProduct")
 	public Object[][] readRegistrationDetails() throws BiffException, IOException
 	{
-		File search = new File("D://TopGear//OpenCart_L2_Vasavi//input_files//TestData.xls");
+		File search = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//TestData.xls");
 		Workbook wb = Workbook.getWorkbook(search);
 		Sheet s1 = wb.getSheet("SearchProd");
 		int rows = s1.getRows();
@@ -430,7 +439,8 @@ public class TC02ProductComparision extends Library
 		fw4.close();
 		br.close();
 		fr.close();
-		extent.endTest(logger);
+		//extent.endTest(logger);
+		extent.flush();
 		driver.close();
 		System.out.println("END OF TESTCASE 02");
 	}

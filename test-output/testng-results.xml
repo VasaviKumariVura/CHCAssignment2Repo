@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="77782" started-at="2018-02-19T05:49:42Z" finished-at="2018-02-19T05:51:00Z">
+  <suite name="Default suite" duration-ms="78858" started-at="2018-02-22T05:56:43Z" finished-at="2018-02-22T05:58:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="77782" started-at="2018-02-19T05:49:42Z" finished-at="2018-02-19T05:51:00Z">
+    <test name="Default test" duration-ms="78858" started-at="2018-02-22T05:56:43Z" finished-at="2018-02-22T05:58:02Z">
       <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="startReport" is-config="true" duration-ms="319" started-at="2018-02-19T11:19:42Z" finished-at="2018-02-19T11:19:42Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="startReport" is-config="true" duration-ms="297" started-at="2018-02-22T11:26:43Z" finished-at="2018-02-22T11:26:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="launchBrowser" is-config="true" duration-ms="4181" started-at="2018-02-19T11:19:42Z" finished-at="2018-02-19T11:19:47Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="launchBrowser" is-config="true" duration-ms="2668" started-at="2018-02-22T11:26:43Z" finished-at="2018-02-22T11:26:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="testcase03" duration-ms="71224" started-at="2018-02-19T11:19:47Z" description="Adding Phones To Cart" data-provider="BillingAddressDetails" finished-at="2018-02-19T11:20:58Z">
+        <test-method status="PASS" signature="testcase03(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="testcase03" duration-ms="71544" started-at="2018-02-22T11:26:46Z" description="Adding Phones To Cart" data-provider="BillingAddressDetails" finished-at="2018-02-22T11:27:57Z">
           <params>
             <param index="0">
               <value>
@@ -61,7 +61,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testcase03 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-19T11:20:58Z" finished-at="2018-02-19T11:20:58Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-22T11:27:57Z" finished-at="2018-02-22T11:27:57Z">
           <params>
             <param index="0">
               <value>
@@ -72,11 +72,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="closeBrowser" is-config="true" duration-ms="2198" started-at="2018-02-19T11:20:58Z" finished-at="2018-02-19T11:21:00Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="closeBrowser" is-config="true" duration-ms="4432" started-at="2018-02-22T11:27:57Z" finished-at="2018-02-22T11:28:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="endReport" is-config="true" duration-ms="694" started-at="2018-02-19T11:21:00Z" finished-at="2018-02-19T11:21:01Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.chc.Assignment2.TC03AddingPhonesToCart@402a079c]" name="endReport" is-config="true" duration-ms="328" started-at="2018-02-22T11:28:02Z" finished-at="2018-02-22T11:28:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->

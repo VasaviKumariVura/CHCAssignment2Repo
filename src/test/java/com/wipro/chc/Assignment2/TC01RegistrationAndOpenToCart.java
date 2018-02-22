@@ -326,7 +326,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			 */
 			driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 			String poundValue = driver.findElement(By.xpath(pro.getProperty("Opencart.WishList.RetrievePrice.Xpath"))).getText();
-			fw = new FileWriter("D://TopGear//OpenCart_L2_Vasavi//output_files//tc01_output.txt");
+			fw = new FileWriter("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//tc01_output.txt");
 			bw = new BufferedWriter(fw);
 			bw.newLine();
 			bw.append(poundValue);
@@ -417,7 +417,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 	@DataProvider (name="RegistrationDetails")
 	public Object[][] readRegistrationDetails() throws BiffException, IOException
 	{
-		File reg = new File("D://TopGear//OpenCart_L2_Vasavi//input_files//TestData.xls");
+		File reg = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//TestData.xls");
 		Workbook wb = Workbook.getWorkbook(reg);
 		Sheet s1 = wb.getSheet("RegistrationDetails");
 		int rows = s1.getRows();
@@ -444,7 +444,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 	@DataProvider (name="ReviewProductDetails")
 	public Object[][] readExcel() throws BiffException, IOException 
 	{
-		File rev = new File("D://TopGear//OpenCart_L2_Vasavi//input_files//TestData.xls");
+		File rev = new File("D://Selenium Stuff//Selenium Workspace//Assignment2_Files//TestData.xls");
 		Workbook wb = Workbook.getWorkbook(rev);
 		Sheet s1 = wb.getSheet("ReviewProduct");
 		int rows = s1.getRows();
@@ -499,7 +499,8 @@ public class TC01RegistrationAndOpenToCart extends Library
 	{
 		bw.close();
 		fw.close();
-		extent.endTest(logger);
+		//extent.endTest(logger);
+		extent.flush();
 		driver.close();
 		System.out.println("END OF TESTCASE 01");
 		
