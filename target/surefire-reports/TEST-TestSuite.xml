@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="143.009" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="269.001" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -63,10 +63,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testcase01_part01" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="39.512"/>
-  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.887"/>
-  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="12.897"/>
-  <testcase name="testcase01_part03" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="22.368"/>
-  <testcase name="testcase03" classname="com.wipro.chc.Assignment2.TC03AddingPhonesToCart" time="24.845"/>
-  <testcase name="testcase04" classname="com.wipro.chc.Assignment2.TC04OrderHistory" time="31.5"/>
+  <testcase name="testcase01_part01" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="62.78"/>
+  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="11.712"/>
+  <testcase name="testcase01_part02" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="12.214"/>
+  <testcase name="testcase01_part03" classname="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart" time="22.346"/>
+  <testcase name="testcase03" classname="com.wipro.chc.Assignment2.TC03AddingPhonesToCart" time="1.553"/>
+  <testcase name="testcase02" classname="com.wipro.chc.Assignment2.TC02ProductComparision" time="75.69"/>
+  <testcase name="testcase04" classname="com.wipro.chc.Assignment2.TC04OrderHistory" time="82.706"/>
 </testsuite>

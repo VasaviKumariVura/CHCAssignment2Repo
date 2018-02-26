@@ -72,7 +72,7 @@ public class TC01RegistrationAndOpenToCart extends Library
         
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
-		logger = extent.startTest("Registration to Opencart");
+		//logger = extent.startTest("Registration to Opencart");
 	}
 	
 	public void registrationAndOpenToCart(String FirstName, String LastName, String EmailID, String Telephone, String Fax,
@@ -88,7 +88,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		System.out.println("TC01-Step02: Registration Page Opened Successfully");
 		Assert.assertEquals(pro.getProperty("CreatAnAccount.URL"), driver.getCurrentUrl());
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 2 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 2 Passed");
 		
 		/*
 		 * TC03: Fill in the Details of the page -Name(s), Email, Phone, Company and Address, City, Post Code.
@@ -120,7 +120,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.Register.PwdConfirm.Xpath"))).sendKeys(PwdConfirm);
 		System.out.println("TC01-Step03: Registration Details Entered Successfully");	
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 3 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 3 Passed");
 		
 		/*
 		 * TC04: Check the "Privacy Policy" and click on "Continue"
@@ -140,7 +140,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		Assert.assertEquals(firstNameSaved, FirstName);
 		Assert.assertEquals(lastNameSaved, LastName);
 		Assert.assertEquals(emailSaved, uniqueEmail);
-		logger.log(LogStatus.PASS, "TC01 Step 4 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 4 Passed");
 		
 		/*
 		 * TC05: Click on "Contact" link
@@ -154,7 +154,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		Assert.assertEquals(email, getEmail);
 		System.out.println("TC01-Step05: Contact Us Page Loaded and Data Verified Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 5 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 5 Passed");
 		
 		/*
 		 * TC06: Type the Enquiry - 100 characters
@@ -162,7 +162,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.ContactUs.Enquiry.Xpath"))).sendKeys("This is to Change of Address/Phone number");
 		System.out.println("TC01-Step06: Enquiry filled in Contact Us page Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 6 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 6 Passed");
 		
 		/*
 		 * TC07: Type the "Enter Code" in the textbox
@@ -174,7 +174,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		Thread.sleep(10000);
 		System.out.println("TC01-Step07: Entered Captcha Message in Contact Us page Succesfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 7 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 7 Passed");
 		
 		/*
 		 * TC08: Click on "Continue" and Click on "Continue" 
@@ -186,7 +186,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.ContactUs.Continue2.Xpath"))).click();
 		System.out.println("TC01-Step08: Submitted Enquiry and Success Message displayed");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 8 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 8 Passed");
 		
 		/*
 		 * TC09: Click on "Samsung Galaxy Tab" on home page which is shown as the main advertisement - 
@@ -195,7 +195,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.HomePage.SamsungImage.Xpath"))).click();
 		System.out.println("TC01-Step09: Navigated to Samsung Galaxy Tab page successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 9 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 9 Passed");
 		
 		/*
 		 * TC10: Click on "Review" tab below
@@ -203,7 +203,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.SamsungTab.ReviewTab.Xpath"))).click();
 		System.out.println("TC01-Step10: Navigated to Samsung Galaxy Review Tab successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 10 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 10 Passed");
 	}
 	
 	
@@ -266,7 +266,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			System.out.println("TC01-Step12: Success Message Displayed Successfully");
 		}
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-		logger.log(LogStatus.PASS, "TC01 Step 11 & 12 Passed");
+		//logger.log(LogStatus.PASS, "TC01 Step 11 & 12 Passed");
 	}
 		public void addToWishlist() throws IOException, InterruptedException
 		{
@@ -278,7 +278,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("Opencart.AddToWishList.Xpath"))).click();
 			System.out.println("TC01-Step13: Product Added to WishList Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 13 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 13 Passed");
 			
 			/*
 			 * TC14: Close the success ribbon message on the page.
@@ -292,7 +292,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			actions.moveToElement(ribbon).click().perform();
 			System.out.println("TC01-Step14: Add to WishList Ribbon Closed Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 14 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 14 Passed");
 			
 			/*
 			 * TC15: Click on "Wishlist" link.
@@ -310,7 +310,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			List<WebElement> list = driver.findElements(By.xpath(pro.getProperty("Opencart.WishList.ItemsCount.Xpath")));
 			String tableCount = Integer.toString(list.size());
 			Assert.assertEquals(wishlistLinkCount, tableCount, "WishList Link Count and Number of products in WishList are not matching");
-			logger.log(LogStatus.PASS, "TC01 Step 15 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 15 Passed");
 			
 			/*
 			 * TC16: Click on "Pound Sterling".
@@ -319,7 +319,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("Opencart.WishList.PoundSterling.Xpath"))).click();
 			System.out.println("TC01-Step16: Price displayed in Pounds Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 16 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 16 Passed");
 			
 			/*
 			 * TC17: Retrieve the value and write into any flat file.
@@ -332,7 +332,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			bw.append(poundValue);
 			System.out.println("TC01-Step17: Pound Strerling Value retrieved Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 17 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 17 Passed");
 			
 			/*
 			 * TC18: Click on "Euro".
@@ -340,7 +340,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("Opencart.WishList.Euro.Xpath"))).click();
 			System.out.println("TC01-Step18: Price displayed in Euros Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 18 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 18 Passed");
 			
 			/*
 			 * TC19: Retrieve the value and write into any flat file.
@@ -351,7 +351,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			bw.append(EuroValue);
 			System.out.println("TC01-Step19: Euro Value retrieved Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 19 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 19 Passed");
 			
 			/*
 			 * TC20: Click on "US Dollar".
@@ -359,7 +359,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("Opencart.WishList.Dollar.Xpath"))).click();
 			System.out.println("TC01-Step20: Price displayed in Dollars Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 20 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 20 Passed");
 			
 			/*
 			 * TC21: Retrieve the value and write into any flat file.
@@ -370,7 +370,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			bw.append(DollarValue);
 			System.out.println("TC01-Step21: Dollar Value retrieved Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 21 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 21 Passed");
 			
 			/*
 			 * TC22: Click on "Add To Cart" icon
@@ -378,7 +378,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("OpenCart.WishList.AddToCart.Xpath"))).click();
 			System.out.println("TC01-Step22: Product added to Cart Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 22 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 22 Passed");
 			
 			/*
 			 * TC23: Close the success message on the page.
@@ -386,7 +386,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("Opencart.ReviewTab.CloseRibbon.Xpath"))).click();
 			System.out.println("TC01-Step23: Add to Cart Success Ribbon Closed Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 23 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 23 Passed");
 			
 			/*
 			 * TC24: Click "Remove" icon on the product in My Wishlist page
@@ -394,7 +394,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("OpenCart.WishList.RemoveFromWishList.Xpath"))).click();
 			System.out.println("TC01-Step24: Product Removed form WishList Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 24 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 24 Passed");
 			
 			/*
 			 * TC25: click on continue.
@@ -402,7 +402,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 			driver.findElement(By.xpath(pro.getProperty("OpenCart.RemoveFromWishList.Continue.Xpath"))).click();
 			System.out.println("TC01-Step25: Navigated to My Account page Successfully");
 			takeSnapshot(driver,DateFormatScreenShot("TC01_"));
-			logger.log(LogStatus.PASS, "TC01 Step 25 Passed");
+			//logger.log(LogStatus.PASS, "TC01 Step 25 Passed");
 		}
 		
 	
@@ -467,26 +467,37 @@ public class TC01RegistrationAndOpenToCart extends Library
 			String Company, String CompID, String Add1, String Add2, String City, String PostCode,
 			String Pwd, String PwdConfirm) throws IOException, InterruptedException
 	{
+		logger = extent.startTest("TC01 Registration to Opencart");
 		DeleteFiles();
 		launchOpencart(driver);
+		logger.log(LogStatus.INFO, "TC01 Launched opencart Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
 		registrationAndOpenToCart(FirstName, LastName, EmailID, Telephone, Fax,
 				Company, CompID, Add1, Add2, City, PostCode,
 				Pwd, PwdConfirm);
+		logger.log(LogStatus.INFO, "TC01 Registered to opencart Successfully ");
+		extent.endTest(logger);
 	}
 	
 	@Test (dataProvider="ReviewProductDetails", priority=0, description = "Adding Review to the Product")
 	public void testcase01_part02(String name, String review, String rating) throws InterruptedException, IOException
 	{
+		logger = extent.startTest("TC01 Review Products");
 		reviewProducts(name, review, rating);
+		logger.log(LogStatus.INFO, "TC01 Products reviewed Successfully ");
+		extent.endTest(logger);
 	}
 	
 	@Test (priority=1)
 	public void testcase01_part03() throws IOException, InterruptedException
 	{
+		logger = extent.startTest("TC01 Add Product to WishList");
 		addToWishlist();
+		logger.log(LogStatus.INFO, "TC01 Added to wishlist Successfully ");
 		logout(driver);
+		logger.log(LogStatus.INFO, "TC01 Logged out Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC01_"));
+		extent.endTest(logger);
 	}
 	
 	
@@ -500,8 +511,8 @@ public class TC01RegistrationAndOpenToCart extends Library
 		bw.close();
 		fw.close();
 		//extent.endTest(logger);
-		extent.flush();
-		driver.close();
+		//extent.flush();
+		driver.quit();
 		System.out.println("END OF TESTCASE 01");
 		
 	}

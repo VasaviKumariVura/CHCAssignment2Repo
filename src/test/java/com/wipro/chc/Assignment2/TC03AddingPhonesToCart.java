@@ -50,7 +50,7 @@ public class TC03AddingPhonesToCart extends Library
 	@BeforeClass
 	public void launchBrowser() throws InterruptedException, IOException
 	{
-		logger = extent.startTest("Adding Phones to Cart");
+		//logger = extent.startTest("Adding Phones to Cart");
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		
@@ -77,7 +77,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.Homepage"))).click();
 		System.out.println("TC03-Step04: Navigated to Homepage Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 4 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 4 Passed");
 		
 		/*
 		 * TC05: Click on "Samsung Galaxy Tab" on home page which is shown as the main advertisement - 
@@ -86,7 +86,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.HomePage.SamsungImage.Xpath"))).click();
 		System.out.println("TC03-Step05: Navigated to Samsung Galaxy Tab page successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 5 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 5 Passed");
 		
 		/*
 		 * TC06: Click on the picture of the Tab (main image)
@@ -100,7 +100,7 @@ public class TC03AddingPhonesToCart extends Library
 		bw1.append("Number of Images: "+imageCount);
 		System.out.println("TC03-Step06: Count of Images written to File successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 6 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 6 Passed");
 		
 		/*
 		 * TC07: Reach to the last image by navigating through Arrow buttons
@@ -116,7 +116,7 @@ public class TC03AddingPhonesToCart extends Library
 			takeSnapshot(driver,DateFormatScreenShot("TC03_"));
 		}
 		System.out.println("TC03-Step07: Navigated through all Images successfully");
-		logger.log(LogStatus.PASS, "TC03 Step 7 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 7 Passed");
 		
 		/*
 		 * TC08: Close the Window
@@ -126,7 +126,7 @@ public class TC03AddingPhonesToCart extends Library
 		element2.click();
 		System.out.println("TC03-Step08: Image Window Closed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 8 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 8 Passed");
 		
 		/*
 		 * TC09: Click on "Add to Cart".
@@ -143,7 +143,7 @@ public class TC03AddingPhonesToCart extends Library
 		Assert.assertTrue(SuccessMessage.contains("Success"), "Not Able to Add product to Cart");
 		System.out.println("TC03-Step09: Added to Cart successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 9 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 9 Passed");
 		
 		/*
 		 * TC10: Click on "Shopping Cart" displayed on ribbon message
@@ -152,7 +152,7 @@ public class TC03AddingPhonesToCart extends Library
 		Assert.assertTrue(driver.getCurrentUrl().contains("cart"), "Not able to navigate to Cart page");
 		System.out.println("TC03-Step10: Shopping Cart page displayed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 10 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 10 Passed");
 		
 		/*
 		 * TC11: Click Estimate shipping and taxes.
@@ -160,7 +160,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.ShoppingCart.EstimateShipping.Xpath"))).click();
 		System.out.println("TC03-Step11: Estimate shipping for the region,state and pincode displayed displayed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 11 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 11 Passed");
 		
 		/*
 		 * TC12: Click on Get Quotes  and check Flat Shipping Rate and Click on Apply Shipping 
@@ -182,7 +182,7 @@ public class TC03AddingPhonesToCart extends Library
 		bw1.append("Total Amount is: "+totalAmt);
 		System.out.println("TC03-Step12: Total Amount written to File successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 12 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 12 Passed");
 		
 		/*
 		 * TC13: Click on 'Use Coupon code' radio button
@@ -190,7 +190,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.id(pro.getProperty("Opencart.ShoppingCart.UseCouponCode.id"))).click();
 		System.out.println("TC03-Step13: Coupon Tab displayed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 13 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 13 Passed");
 		
 		/*
 		 * TC14: Enter the Random Coupon Number and click on Apply Coupon
@@ -204,7 +204,7 @@ public class TC03AddingPhonesToCart extends Library
 		bw1.append("Warning Message is: "+warningMessage);
 		System.out.println("TC03-Step14: Warning Message written to File successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 14 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 14 Passed");
 		
 		/*
 		 * TC15: Click on Check out button.
@@ -213,7 +213,7 @@ public class TC03AddingPhonesToCart extends Library
 		Assert.assertTrue(driver.getCurrentUrl().contains("checkout"));
 		System.out.println("TC03-Step15: Navigated to Checkout page successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 15 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 15 Passed");
 		
 		/*
 		 * TC16: Select Billing Details -> I want to use new address option
@@ -224,7 +224,7 @@ public class TC03AddingPhonesToCart extends Library
 		element6.click();
 		System.out.println("TC03-Step16: New Address Details displayed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 16 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 16 Passed");
 		
 		/*
 		 * TC17: Fill in the mandatory details and click continue
@@ -244,7 +244,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.SecondContinue.Xpath"))).click();
 		System.out.println("TC03-Step17: New Address Details Added successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 17 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 17 Passed");
 		
 		/*
 		 * TC18: Select the new address for Delivery in the list box that was 
@@ -257,7 +257,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.ThirdContinue.Xpath"))).click();
 		System.out.println("TC03-Step18: New Address Details selected in Delivery Details tab successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 18 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 18 Passed");
 		
 		/*
 		 * TC19: Add Comments  and click on Continue.
@@ -268,7 +268,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FourthContinue.Xpath"))).click();
 		System.out.println("TC03-Step19: Comments added to Delivery Method tab successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 19 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 19 Passed");
 		
 		/*
 		 * TC20: Check the Terms and conditions and click on the Terms and conditions link.
@@ -283,7 +283,7 @@ public class TC03AddingPhonesToCart extends Library
 		bw1.append("Number of Characters in Terms&Conditions Window: "+termsLength);
 		System.out.println("TC03-Step20: Number of Characters in Terms&Conditions written to file successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 20 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 20 Passed");
 		
 		/*
 		 * TC21: Close the Window and click Continue
@@ -315,7 +315,7 @@ public class TC03AddingPhonesToCart extends Library
 			s1.createRow(row).createCell(1).setCellValue(al.get(i));
 		}
 		wb.write(fos);
-		logger.log(LogStatus.PASS, "TC03 Step 21 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 21 Passed");
 		
 		/*
 		 * TC22: Click on Modify for Billing details rollup (to select the initially created address)
@@ -324,7 +324,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.BillingDetails.Modify.Xpath"))).click();
 		System.out.println("TC03-Step22: Selected Initial Address in the Billing Details tab successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 22 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 22 Passed");
 		
 		/*
 		 * TC23: Select the first address in the list box and click on continue until you reach confirm order
@@ -351,7 +351,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FifthContinue.Xpath"))).click();
 		System.out.println("TC03-Step23: Clicked on all Continue buttons in Checkout page successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 23 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 23 Passed");
 		
 		/*
 		 * TC24: Click on Confirm order
@@ -360,7 +360,7 @@ public class TC03AddingPhonesToCart extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.ConfirmOrder.Xpath"))).click();
 		System.out.println("TC03-Step24: Your Order Has Been Processed! page displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
-		logger.log(LogStatus.PASS, "TC03 Step 24 Passed");
+		//logger.log(LogStatus.PASS, "TC03 Step 24 Passed");
 	}
 	
 	
@@ -393,14 +393,20 @@ public class TC03AddingPhonesToCart extends Library
 	public void testcase03(String FirstName, String LastName,
 			String Company, String CompID, String Add1, String Add2, String City, String PostCode) throws InterruptedException, IOException
 	{
+		logger = extent.startTest("TC03 Adding Phones to Cart");
 		launchOpencart(driver);
+		logger.log(LogStatus.INFO, "TC03 Launched Opencart Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
 		login(driver);
+		logger.log(LogStatus.INFO, "TC03 Logged into Application Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
 		addingPhonesToCart(FirstName, LastName,
 				Company, CompID, Add1, Add2, City, PostCode);
+		logger.log(LogStatus.INFO, "TC03 Added Phones to cart Successfully ");
 		logout(driver);
+		logger.log(LogStatus.INFO, "TC03 Logged out Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC03_"));
+		extent.endTest(logger);
 	}
 	
 	
@@ -432,7 +438,7 @@ public class TC03AddingPhonesToCart extends Library
 		bw1.close();
 		fw1.close();
 		//extent.endTest(logger);
-		extent.flush();
+		//extent.flush();
 		Thread.sleep(2000);
 		driver.close();
 		System.out.println("END OF TESTCASE 03");

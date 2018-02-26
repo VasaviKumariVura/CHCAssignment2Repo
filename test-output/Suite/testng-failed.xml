@@ -3,30 +3,23 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="com.wipro.chc.Assignment2.TC02ProductComparision">
+      <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
         <methods>
-          <include name="testcase02" invocation-numbers="0"/>
-          <include name="getResult"/>
+          <include name="testcase03"/>
           <include name="startReport"/>
-          <include name="closeBrowser"/>
-          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- com.wipro.chc.Assignment2.TC02ProductComparision -->
+      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
       <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
         <methods>
           <include name="testcase04"/>
         </methods>
       </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
-      <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
-        <methods>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
       <class name="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart">
         <methods>
+          <include name="testcase01_part02"/>
           <include name="launchBrowser"/>
-          <include name="getResult"/>
-          <include name="closeBrowser"/>
+          <include name="testcase01_part03"/>
+          <include name="testcase01_part01"/>
         </methods>
       </class> <!-- com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart -->
     </classes>

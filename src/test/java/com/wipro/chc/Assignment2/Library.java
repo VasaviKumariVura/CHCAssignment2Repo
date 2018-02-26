@@ -23,6 +23,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -43,7 +44,7 @@ public class Library
 	//private static final int TIME_UNIT = 30;
 	static ExtentReports extent;
 	static ExtentTest logger;
-	public static String Node = "http://10.255.54.24:4444/wd/hub";
+	public static String Node = "http://10.255.54.32:4444/wd/hub";
 	
 	/**
 	 * This Method is to load the ObjectRepo properties file into class
@@ -73,7 +74,7 @@ public class Library
  		
 		driver.get(pro.getProperty("OpenCart.URL"));
 		System.out.println("Step01: Opencart Application Launched Successfully");
-		logger.log(LogStatus.PASS, "Step 1 : Opencart Application Launched..");
+		//logger.log(LogStatus.PASS, "Step 1 : Opencart Application Launched..");
 		Assert.assertEquals(driver.getTitle(), "Your Store");
 		driver.manage().window().maximize();
 		return driver;
@@ -88,7 +89,7 @@ public class Library
 	{
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.Loginlink.Xpath"))).click();
 		System.out.println("Step02: Login Page displayed Successfully");
-		logger.log(LogStatus.PASS, "Step 2 : Entered Login Page of Application..");
+		//logger.log(LogStatus.PASS, "Step 2 : Entered Login Page of Application..");
 		//driver.findElement(By.xpath(pro.getProperty("Opencart.UserName.Xpath"))).sendKeys(TC01RegistrationAndOpenToCart.uniqueEmail);
 		//driver.findElement(By.xpath(pro.getProperty("Opencart.Password.Xpath"))).sendKeys(TC01RegistrationAndOpenToCart.getPassword);
 		driver.findElement(By.xpath(pro.getProperty("Opencart.UserName.Xpath"))).sendKeys("opencartdemo1@gmail.com");
@@ -97,7 +98,7 @@ public class Library
 		//checkpoint
 		Assert.assertTrue(driver.findElement(By.xpath(pro.getProperty("Opencart.UsernameLink.Xpath"))).getText().contains("demo1"), "Login Failed");
 		System.out.println("Step03: Logged into Opencart Successfully");
-		logger.log(LogStatus.PASS, "Step 3 : Logged into Application..");
+		//logger.log(LogStatus.PASS, "Step 3 : Logged into Application..");
 		return driver;
 	}
 	
@@ -197,9 +198,9 @@ public class Library
 	@AfterSuite
 	public void endReport()
 	{
-		extent.endTest(logger);
-		//extent.flush();
-		extent.close();
+		//extent.endTest(logger);
+		extent.flush();
+		//extent.close();
 	}
 }
 

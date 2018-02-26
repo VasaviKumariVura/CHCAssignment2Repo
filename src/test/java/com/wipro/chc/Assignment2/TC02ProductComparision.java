@@ -73,7 +73,7 @@ public class TC02ProductComparision extends Library
 	        
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
-		logger = extent.startTest("Product Comparision");
+		//logger = extent.startTest("Product Comparision");
 	}
 	
 	
@@ -105,7 +105,7 @@ public class TC02ProductComparision extends Library
 		bw1.append("Number of Search Items with phrase 'apple': "+count);
 		System.out.println("TC02-Step04: Searched for the apple Product and added count to file Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 4 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 4 Passed");
 		
 		/*
 		 * TC05: Select "Monitors" under Components in the drop down.  
@@ -118,7 +118,7 @@ public class TC02ProductComparision extends Library
 		bw1.append("Number of Monitors: "+count1);
 		System.out.println("TC02-Step05: Searched for the Monitors and added count to File Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 5 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 5 Passed");
 		
 		/*
 		 * TC06: Click on "Phones and PDA's" tab.
@@ -129,7 +129,7 @@ public class TC02ProductComparision extends Library
 		bw1.append("Number of Phones & PDA's: "+count2);
 		System.out.println("TC02-Step06: Navigated to PhonesAndPDAs tab and added count to File Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 6 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 6 Passed");
 		
 		/*
 		 * TC07: Sort from the "Price (High > Low)" for the page.
@@ -146,7 +146,7 @@ public class TC02ProductComparision extends Library
 		float p2 = Float.parseFloat(prod2);
 		float p3 = Float.parseFloat(prod3);
 		Assert.assertTrue(((p1>p2)&&(p2>p3)), "Prices not Sorted successfully");
-		logger.log(LogStatus.PASS, "TC02 Step 7 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 7 Passed");
 		
 		/*
 		 * TC08: Click on "Add to Compare " for the first three phones" and click on Close button
@@ -182,7 +182,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.PhonesAndPDAs.AddToCompare.SuccessMessage.Close.Xpath"))).click();
 		System.out.println("TC02-Step08: Added 3 products to Compare Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 8 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 8 Passed");
 		
 		/*
 		 * TC09: Click on "Product Compare"
@@ -208,7 +208,7 @@ public class TC02ProductComparision extends Library
 		}
 		System.out.println("TC02-Step09: Product Names in Comparision table and Flat file matched Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 9 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 9 Passed");
 		
 		/*
 		 * TC10: Click on the first phone link on the page.
@@ -217,7 +217,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.linkText("iPhone")).click();
 		System.out.println("TC02-Step10: Product Details displaying Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 10 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 10 Passed");
 		
 		/*
 		 * TC11: Check the fifth feature in the description section of the phone and write into flat file.
@@ -235,7 +235,7 @@ public class TC02ProductComparision extends Library
 			System.out.println("TC02-Step11: the Phrase NO DESCRIPTION added to flat file successfully");
 		}
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 11 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 11 Passed");
 		
 		/*
 		 * TC12: Click on "Add to Cart".
@@ -247,7 +247,7 @@ public class TC02ProductComparision extends Library
 		Assert.assertTrue(SuccessMessage.contains("Success"), "Not Able to Add product for Cart");
 		System.out.println("TC02-Step12: Product Added to Cart successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 12 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 12 Passed");
 		
 		/*
 		 * TC13: Click on "Shopping Cart" displayed on ribbon message
@@ -255,7 +255,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.linkText(pro.getProperty("OpenCart.AddToCart.SuccessMessage.ShoppingCart.linkText"))).click();
 		System.out.println("TC02-Step13: Cart Displayed with the Product added to it successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 13 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 13 Passed");
 		
 		/*
 		 * TC14: Click on Check out button.
@@ -263,7 +263,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.xpath(pro.getProperty("OpenCart.ShoppingCart.Checkout.Xpath"))).click();
 		System.out.println("TC02-Step14: Checkout Page displayed successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 14 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 14 Passed");
 		
 		/*
 		 * TC15: Click on Continue buttons (2nd, 3rd and 4th)
@@ -280,7 +280,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FourthContinue.Xpath"))).click();
 		System.out.println("TC02-Step15: Fourth Continue clicked 5th Step displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 15 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 15 Passed");
 		
 		/*
 		 * TC16: Check the Terms and Conditions Checkbox and click Continue
@@ -293,7 +293,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FifthContinue.Xpath"))).click();
 		System.out.println("TC02-Step16: Clicked on Fifth Continue. Order Tab displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 16 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 16 Passed");
 		
 		/*
 		 * TC17: Click Confirm Order
@@ -302,7 +302,7 @@ public class TC02ProductComparision extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.ConfirmOrder.Xpath"))).click();
 		System.out.println("TC02-Step17: Your Order Has Been Processed! page displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 17 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 17 Passed");
 		
 		/*
 		 * TC18: Click on browser Back button
@@ -314,7 +314,7 @@ public class TC02ProductComparision extends Library
 		Assert.assertEquals(actual, pro.getProperty("Opencart.EmptyShoppingCart.Message"));
 		System.out.println("TC02-Step18: Cart is displayed with Empty Cart Message Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 18 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 18 Passed");
 		
 		/*
 		 * TC19: Click on "Order history " from "My account "tab
@@ -330,7 +330,7 @@ public class TC02ProductComparision extends Library
 		bw4.newLine();
 		bw4.append("Order Cost is: "+cost[1]);
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 19 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 19 Passed");
 		
 		/*
 		 * TC20: Click on "Subscribe to news letters".
@@ -343,7 +343,7 @@ public class TC02ProductComparision extends Library
 		//element.click();
 		System.out.println("TC02-Step20: Subscribed to NewsLetters Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 20 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 20 Passed");
 		
 		/*
 		 * TC21: Click on Extras -> Specials in the footer
@@ -352,7 +352,7 @@ public class TC02ProductComparision extends Library
 		String count3 = driver.findElement(By.xpath(pro.getProperty("Opencart.Specials.NoOfItems.Xpath"))).getText().substring(13,15);
 		System.out.println("TC02-Step21: "+count3+" Special Offers Displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 21 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 21 Passed");
 		
 		/*
 		 * TC22: Click on List (or) Grid whichever is enabled
@@ -368,7 +368,7 @@ public class TC02ProductComparision extends Library
 			System.out.println("TC02-Step22: Clicked on Grid Successfully");
 		}
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
-		logger.log(LogStatus.PASS, "TC02 Step 22 Passed");
+		//logger.log(LogStatus.PASS, "TC02 Step 22 Passed");
 	}
 	
 	
@@ -418,13 +418,19 @@ public class TC02ProductComparision extends Library
 	@Test (dataProvider="SearchProduct", priority=2, description = "Product Comparision")
 	public void testcase02(String ProductName) throws AWTException, IOException, InterruptedException
 	{
+		logger = extent.startTest("TC02 Product Comparision");
 		launchOpencart(driver);
+		logger.log(LogStatus.INFO, "TC02 Launched Opencart Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
 		login(driver);
+		logger.log(LogStatus.INFO, "TC02 Logged into opencart application Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
 		productComparision(ProductName);
+		logger.log(LogStatus.INFO, "TC02 Product Comparision done Successfully ");
 		logout(driver);
+		logger.log(LogStatus.INFO, "TC02 Logged out from Application Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC02_"));
+		extent.endTest(logger);
 	}
 	
 	
@@ -440,7 +446,7 @@ public class TC02ProductComparision extends Library
 		br.close();
 		fr.close();
 		//extent.endTest(logger);
-		extent.flush();
+		//extent.flush();
 		driver.close();
 		System.out.println("END OF TESTCASE 02");
 	}

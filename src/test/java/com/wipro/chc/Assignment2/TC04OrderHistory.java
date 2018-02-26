@@ -23,6 +23,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
@@ -33,7 +34,7 @@ public class TC04OrderHistory extends Library
 	Scanner scan = new Scanner(System.in);
 	WebDriverWait wait;
 	private static final int TIME_UNIT = 30;
-	//ExtentTest logger;
+	ExtentTest logger;
 	
 	@BeforeClass
 	public void launchBrowser() throws IOException
@@ -48,7 +49,7 @@ public class TC04OrderHistory extends Library
 		
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
-		logger = extent.startTest("OrderHistory");
+		//logger = extent.startTest("OrderHistory");
 	}
 	
 	
@@ -63,7 +64,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.linkText("Home")).click();
 		System.out.println("TC04-Step04: Navigated to Homepage Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 4 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 4 Passed");
 		
 		/*
 		 * TC05: Click any items displayed  under 'Featured' on the Home page.
@@ -83,7 +84,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.Homepage.Featured.AppleCinema.Xpath"))).click();
 		System.out.println("TC04-Step05: Navigated to iPhone Product page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 5 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 5 Passed");
 		
 		/*
 		 * TC06: Click on the Related Products tab on the page.
@@ -98,7 +99,7 @@ public class TC04OrderHistory extends Library
 		}
 		System.out.println("TC04-Step06: Clicked on Related Products Tab(if present)Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 6 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 6 Passed");
 		
 		/*
 		 * TC07: Click on Add to Cart for the related product.
@@ -106,7 +107,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.RelatedProductsTab.AddRelatedProductToCart.Xpath"))).click();
 		System.out.println("TC04-Step07: Related Product Added to Cart Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 7 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 7 Passed");
 		
 		/*
 		 * TC08: Click on Shopping Cart link displayed in the top right corner of the page.
@@ -118,7 +119,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.linkText(pro.getProperty("Opencart.ShoppingCart.LinkText"))).click();
 		System.out.println("TC04-Step08: Shopping Cart Page displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 8 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 8 Passed");
 		
 		/*
 		 * TC09: Change the quantity of the product.
@@ -128,7 +129,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.ShoppingCart.ChangeQuantity.Xpath"))).sendKeys("5");
 		System.out.println("TC04-Step09: Quantity changed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 9 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 9 Passed");
 		
 		/*
 		 * TC10: Click on the update icon.
@@ -148,7 +149,7 @@ public class TC04OrderHistory extends Library
 		al1.add(productQuantity1);
 		al1.add(productUnitPrice1);
 		al1.add(productTotal1);
-		logger.log(LogStatus.PASS, "TC04 Step 10 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 10 Passed");
 			
 		/*
 		 * TC11: Click on Check out button.
@@ -157,7 +158,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.ShoppingCart.Checkout.Xpath"))).click();
 		System.out.println("TC04-Step11: Checkout Page displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 11 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 11 Passed");
 		
 		/*
 		 * TC12: Click on Continue buttons (2nd, 3rd and 4th)
@@ -174,7 +175,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FourthContinue.Xpath"))).click();
 		System.out.println("TC04-Step12: Fourth Continue clicked 5th Step displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 12 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 12 Passed");
 		
 		/*
 		 * TC13: Check the Terms and Conditions Checkbox and click Continue
@@ -187,7 +188,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.FifthContinue.Xpath"))).click();
 		System.out.println("TC04-Step13: Clicked on Fifth Continue. Order Tab displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 13 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 13 Passed");
 		
 		/*
 		 * TC14: Verify the product details is valid.
@@ -227,7 +228,7 @@ public class TC04OrderHistory extends Library
 		
 		System.out.println("TC04-Step14: Product Details are Verified and Valid");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 14 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 14 Passed");
 		
 		/*
 		 * TC15: Click Confirm Order
@@ -236,7 +237,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.CheckoutPage.ConfirmOrder.Xpath"))).click();
 		System.out.println("TC04-Step15: Your Order Has Been Processed! page displayed Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 15 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 15 Passed");
 		
 		/*
 		 * TC16: Click on Order History of My Account -footer of the page.
@@ -245,7 +246,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.OrderHistory.Xpath"))).click();
 		System.out.println("TC04-Step16: Navigated to Order History page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 16 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 16 Passed");
 		
 		/*
 		 * TC17: Click on "View" icon of the previous order of the product.
@@ -262,7 +263,7 @@ public class TC04OrderHistory extends Library
 		}
 		System.out.println("TC04-Step17: Navigated to Order Information page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 17 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 17 Passed");
 		
 		/*
 		 * TC18: Click on "Return"  icon
@@ -271,7 +272,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.OrderInfo.Return.Xpath"))).click();
 		System.out.println("TC04-Step18: Navigated to Products Return page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 18 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 18 Passed");
 		
 		/*
 		 * TC19: Fill the necessary details and click on continue button.
@@ -289,7 +290,7 @@ public class TC04OrderHistory extends Library
 		driver.findElement(By.xpath(pro.getProperty("Opencart.Return.Continue.Xpath"))).click();
 		System.out.println("TC04-Step19: Navigated to Product Returns Page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
-		logger.log(LogStatus.PASS, "TC04 Step 19 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 19 Passed");
 		
 		/*
 		 * TC20: Click on continue button.
@@ -298,19 +299,25 @@ public class TC04OrderHistory extends Library
 		System.out.println("TC04-Step20: Navigated to Home Page Successfully");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
 		fos.close();
-		logger.log(LogStatus.PASS, "TC04 Step 20 Passed");
+		//logger.log(LogStatus.PASS, "TC04 Step 20 Passed");
 	}
 	
 	@Test (priority=4, description = "Order History")
 	public void testcase04() throws InterruptedException, IOException
 	{
+		logger = extent.startTest("TC04 OrderHistory");
 		launchOpencart(driver);
+		logger.log(LogStatus.INFO, "TC04 Launched opencart Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
 		login(driver);
+		logger.log(LogStatus.INFO, "TC04 Logged into opencart Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
 		orderHistory();
+		logger.log(LogStatus.INFO, "TC04 Order History called Successfully ");
 		logout(driver);
+		logger.log(LogStatus.INFO, "TC04 Logged out Successfully ");
 		takeSnapshot(driver,DateFormatScreenShot("TC04_"));
+		extent.endTest(logger);
 	}
 	
 	
@@ -319,7 +326,7 @@ public class TC04OrderHistory extends Library
 	public void closeBrowser() throws IOException
 	{
 		//extent.endTest(logger);
-		extent.flush();
+		//extent.flush();
 		driver.close();
 		System.out.println("END OF TESTCASE 04");
 	}
