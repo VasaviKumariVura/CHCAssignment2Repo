@@ -73,6 +73,7 @@ public class TC01RegistrationAndOpenToCart extends Library
 		driver.manage().timeouts().implicitlyWait(TIME_UNIT, TimeUnit.SECONDS);
 		loadProperties();
 		//logger = extent.startTest("Registration to Opencart");
+		System.out.println("I am good girl");
 	}
 	
 	public void registrationAndOpenToCart(String FirstName, String LastName, String EmailID, String Telephone, String Fax,

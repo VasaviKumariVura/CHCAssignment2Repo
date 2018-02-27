@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.wipro.chc.Assignment2.TC03AddingPhonesToCart">
-        <methods>
-          <include name="testcase03"/>
-          <include name="startReport"/>
-        </methods>
-      </class> <!-- com.wipro.chc.Assignment2.TC03AddingPhonesToCart -->
-      <class name="com.wipro.chc.Assignment2.TC04OrderHistory">
-        <methods>
-          <include name="testcase04"/>
-        </methods>
-      </class> <!-- com.wipro.chc.Assignment2.TC04OrderHistory -->
       <class name="com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart">
         <methods>
-          <include name="testcase01_part02"/>
+          <include name="testcase01_part02" invocation-numbers="0 1"/>
           <include name="launchBrowser"/>
+          <include name="getResult"/>
           <include name="testcase01_part03"/>
-          <include name="testcase01_part01"/>
+          <include name="testcase01_part01" invocation-numbers="1 2 3 4"/>
+          <include name="startReport"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- com.wipro.chc.Assignment2.TC01RegistrationAndOpenToCart -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
